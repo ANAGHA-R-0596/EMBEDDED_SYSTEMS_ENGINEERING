@@ -41,6 +41,10 @@ int main()
         ret_quotient = div(a, b);
         printf("THE RESULT AFTER DIVISION => %f\n", ret_quotient);
     }
+    else
+    {
+        printf("INVALID CHOICE\n");
+    }
    
     return 0;
 }
