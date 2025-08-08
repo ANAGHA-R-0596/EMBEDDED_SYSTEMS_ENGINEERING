@@ -1,3 +1,8 @@
+/*
+AUTHOR : ANAGHA R
+DATE : 08/08/2025
+FUNCTION TO PERFORM DIVISION OPERATION
+*/
 #include<stdio.h>
 float div(int,int);
 int main()
