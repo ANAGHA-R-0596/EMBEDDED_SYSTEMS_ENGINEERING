@@ -1,3 +1,8 @@
+/*
+AUTHOR : ANAGHA R
+DATE : 08/08/2025
+FUNCTION TO PERFORM SUBTRACTION OPERATION
+*/
 #include<stdio.h>
 int sub(int,int);
 int main()
