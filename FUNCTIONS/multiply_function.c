@@ -1,3 +1,8 @@
+/*
+AUTHOR : ANAGHA R
+DATE : 08/08/2025
+FUNCTION TO PERFORM MULTIPLICATION OPERATION
+*/
 #include<stdio.h>
 int mul(int,int);
 int main()
