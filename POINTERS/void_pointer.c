@@ -1,7 +1,7 @@
 /*
     ANAGHA R
     22/08/2025
-    This program demonstrates the use of void pointers to store and print addresses and values of an array of integers.
+    This program demonstrates the use of void pointers to store and print values of an array of integers.
 */
 #include<stdio.h>
 
