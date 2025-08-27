@@ -1,7 +1,7 @@
 /*
     ANAGHA R
     27/08/2025
-    This program displays the binary representation of an integer using bitwise operations.
+    This program displays the binary representation of an integer,set the bit and clear the bit using bitwise operations.
 */
 
 #include<stdio.h>
@@ -13,9 +13,9 @@ int main()
     int num,pos,place;
     printf("Enter an integer: ");
     scanf("%d", &num); 
-    printf("Enter the bit position to set a bit (0-31): ");
+    printf("Enter the bit position to set a bit : ");
     scanf("%d", &pos);  
-    printf("Enter the bit position to clear a bit (0-31): ");
+    printf("Enter the bit position to clear a bit : ");
     scanf("%d", &place); 
     display_binary(num);   // Call function to display binary representation
     set_bit(num, pos);     // Call function to set the bit at the specified position
