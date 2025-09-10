@@ -1,0 +1,35 @@
+<circuit version="1.1.0-SR1" rev="2005" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Switch" CircId="Switch-32" mainComp="false" Show_id="false" Show_Val="false" Pos="504,80" rotation="0" hflip="-1" vflip="1" label="Switch-32" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" DT="false" Poles="1" />
+
+<item itemtype="Ground" CircId="Ground-34" mainComp="false" Show_id="false" Show_Val="false" Pos="524,228" rotation="0" hflip="1" vflip="1" label="Ground-34" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="MCU" CircId="mega328-35" mainComp="false" Show_id="true" Show_Val="false" Pos="340,44" rotation="0" hflip="1" vflip="1" label="mega328-35" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="D:/EMBEDDED_SYSTEMS/AVR_PROGRAMMING/BLINK_LED_PD3_PULLUP/BLINK_LED_PD3_PULLUP/Debug/BLINK_LED_PD3_PULLUP.hex" Auto_Load="false" saveEepr="true" Logic_Symbol="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" Clk_Out="false" MainMcu="false" SerialMon="-1" />
+
+<item itemtype="Led" CircId="Led-36" mainComp="false" Show_id="false" Show_Val="false" Pos="496,144" rotation="0" hflip="1" vflip="1" label="Led-36" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Yellow" Grounded="false" Threshold="2.4 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-37" mainComp="false" Show_id="false" Show_Val="false" Pos="120,64" rotation="0" hflip="1" vflip="1" label="Fixed Voltage-37" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" Out="true" />
+
+<item itemtype="Resistor" CircId="Resistor-38" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="176,64" rotation="0" hflip="1" vflip="1" label="Resistor-38" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="100 Ω" />
+
+<item itemtype="Node" CircId="Node-43" mainComp="false" Pos="428,92" />
+
+<item itemtype="Node" CircId="Node-44" mainComp="false" Pos="524,144" />
+
+<item itemtype="Connector" uid="Connector-85" startpinid="Fixed Voltage-37-outnod" endpinid="Resistor-38-lPin" pointList="136,64,160,64" />
+
+<item itemtype="Connector" uid="Connector-87" startpinid="Node-43-1" endpinid="Switch-32-switch0pinN" pointList="428,92,488,92,488,80" />
+
+<item itemtype="Connector" uid="Connector-88" startpinid="Resistor-38-rPin" endpinid="Node-43-0" pointList="192,64,288,64,288,0,428,0,428,92" />
+
+<item itemtype="Connector" uid="Connector-89" startpinid="Node-43-2" endpinid="mega328-35-PORTC0" pointList="428,92,380,92" />
+
+<item itemtype="Connector" uid="Connector-90" startpinid="Switch-32-pinP0" endpinid="Node-44-1" pointList="520,80,524,80,524,144" />
+
+<item itemtype="Connector" uid="Connector-91" startpinid="Led-36-rPin" endpinid="Node-44-0" pointList="512,144,524,144" />
+
+<item itemtype="Connector" uid="Connector-92" startpinid="Node-44-2" endpinid="Ground-34-Gnd" pointList="524,144,524,212" />
+
+<item itemtype="Connector" uid="Connector-97" startpinid="Led-36-lPin" endpinid="mega328-35-PORTD3" pointList="480,144,480,220,300,220,300,84,332,84" />
+
+</circuit>
