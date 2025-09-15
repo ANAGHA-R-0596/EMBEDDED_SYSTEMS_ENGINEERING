@@ -4,3 +4,6 @@
 *.obj
 *.log
 *.tmp
+# Ignore Visual Studio workspace files
+.vs/
+*.atsuo
