@@ -7,3 +7,5 @@
 # Ignore Visual Studio workspace files
 .vs/
 *.atsuo
+# VS Code settings
+.vscode/
