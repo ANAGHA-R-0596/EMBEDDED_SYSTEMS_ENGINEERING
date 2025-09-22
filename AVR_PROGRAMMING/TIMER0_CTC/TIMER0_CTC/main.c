@@ -1,0 +1,35 @@
+/*
+ * TIMER0_CTC.c
+ * BLINK AN LED WITH 2 sec DELAY BY USING CTC AND NO PRESCALING.
+ * Created: 19-09-2025 20:37:41
+ * Author : ANAGHA
+ */ 
+
+
+#define F_CPU 16000000UL
+#include <avr/io.h>
+
+int main(void)
+{
+    DDRB |= (1 << DDB5);  //SET DDB5 AS OUTPUT FOR LED.
+	TCCR0A |= (1 << WGM01); // CTC MODE 
+	OCR0A = 200; // SETPOINT,ANY VALUE LESS THAN 255  SINCE IT'S AN 8 BIT REGISTER.
+	TCNT0 = 0; //SET INITIAL VALUE OF TIMER,TCNT0 AS 0.
+	TCCR0B |= (1 << CS00); // NO PRESCALING 
+	TIFR0 |= (1 << OCF0A); //WRITING 1 TO OCF0A BIT OF TIFR0 REGISTER TO RESET IT.
+    while (1) 
+    {
+		PORTB ^= (1 << PORTB5);
+		for (long int i = 0;i < 160000;i++)  // FOR 2 sec DELAY,LOOP HAS TO RUN 160000 TIMES.
+		{
+			while(!(TIFR0 &(1 << OCF0A))) //FOR GETTING 12.5us DELAY,KEEP LOOPING UNTIL OCF0A BECOMES 1.
+			{
+				
+			}
+			TIFR0 |= (1 << OCF0A); //WRITING 1 TO OCF0A BIT OF TIFR0 REGISTER TO RESET IT.
+		}
+		
+    }
+	
+}
+
